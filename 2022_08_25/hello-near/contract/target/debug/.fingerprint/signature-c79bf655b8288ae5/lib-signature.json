@@ -1,0 +1,1 @@
+{"rustc":1649159733154951920,"features":"[\"std\"]","target":9248393232549153295,"profile":3735503092003429423,"path":9604507788251403021,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug\\.fingerprint\\signature-c79bf655b8288ae5\\dep-lib-signature"}}],"rustflags":["-C","link-args=-s"],"metadata":3639813390204373107,"config":2202906307356721367,"compile_kind":0}

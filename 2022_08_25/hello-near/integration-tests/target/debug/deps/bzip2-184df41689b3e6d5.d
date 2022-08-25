@@ -1,0 +1,11 @@
+d:\Workspace\Rust\tempCode\near_testing\hello-near\integration-tests\target\debug\deps\bzip2-184df41689b3e6d5.rmeta: C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\lib.rs C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\mem.rs C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\bufread.rs C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\read.rs C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\write.rs
+
+d:\Workspace\Rust\tempCode\near_testing\hello-near\integration-tests\target\debug\deps\libbzip2-184df41689b3e6d5.rlib: C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\lib.rs C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\mem.rs C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\bufread.rs C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\read.rs C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\write.rs
+
+d:\Workspace\Rust\tempCode\near_testing\hello-near\integration-tests\target\debug\deps\bzip2-184df41689b3e6d5.d: C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\lib.rs C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\mem.rs C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\bufread.rs C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\read.rs C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\write.rs
+
+C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\lib.rs:
+C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\mem.rs:
+C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\bufread.rs:
+C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\read.rs:
+C:\Users\Phatnoo123\.cargo\registry\src\github.com-1ecc6299db9ec823\bzip2-0.4.3\src\write.rs:
