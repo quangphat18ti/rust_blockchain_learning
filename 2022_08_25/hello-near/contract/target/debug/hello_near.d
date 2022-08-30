@@ -1,1 +1,0 @@
-D:\Workspace\Rust\tempCode\near_testing\hello-near\contract\target\debug\hello_near.exe: D:\Workspace\Rust\tempCode\near_testing\hello-near\contract\src\lib.rs D:\Workspace\Rust\tempCode\near_testing\hello-near\contract\src\main.rs
