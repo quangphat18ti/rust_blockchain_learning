@@ -2,7 +2,7 @@
 
 use core::panic;
 
-use near_sdk::{env, near_bindgen, AccountId, Balance, BorshStorageKey, Timestamp, Promise, PromiseOrValue};
+use near_sdk::{env, near_bindgen, AccountId, Balance, BorshStorageKey, Timestamp, Promise, PromiseOrValue, PanicOnDefault};
 use near_sdk::json_types::U128;
 use near_sdk::serde::{Serialize, Deserialize};
 use near_sdk::collections::LookupMap;
@@ -14,8 +14,8 @@ pub type OrderId = String;
 mod order;
 use order::*;
 
+#[derive(BorshDeserialize, BorshSerialize, PanicOnDefault)]
 #[near_bindgen]
-#[derive(BorshDeserialize, BorshSerialize)]
 struct EcomerceContract{
     owner_id: AccountId,
     orders: LookupMap<OrderId, Order>
@@ -26,7 +26,9 @@ enum StorageKey{
     OrdersKey,
 }
 
+#[near_bindgen]
 impl EcomerceContract {
+    #[init]
     pub fn new(owner_id: AccountId) -> Self{
         Self { 
             owner_id, 
@@ -34,20 +36,22 @@ impl EcomerceContract {
         }
     }
 
-    pub fn create_order(&mut self, order_id:OrderId, payer_id: AccountId, amount: Balance) {
+    pub fn create_order(&mut self, order_id:OrderId, payer_id: AccountId, amount: U128) {
         assert_eq!(env::predecessor_account_id(), self.owner_id, "Only Owner can add Order");
-        let order = Order::new(order_id.clone(), payer_id, amount);
+        let order = Order::new(order_id.clone(), payer_id, amount.0);
         self.orders.insert(&order_id, &order);
     }
 
+    #[payable]
     pub fn pay_order(&mut self, order_id: OrderId) -> PromiseOrValue<U128> {
         let mut order = self.get_order(order_id.clone());
+        assert_eq(env::signer_account_id(), self.pay_order, "ERROR_DIFFERENT_PAYER");
 
         /// check enough deposit
         assert!(env::attached_deposit() >= order.get_amount(), "ERROR_DEPOSIT_NOT_ENOUGH");
 
         /// kiểm tra đơn hàng đã thanh toán chưa
-        assert!(!order.is_completed);
+        assert!(!order.is_completed, "ORDER IS PAYED BY {}", self.pay_order);
 
         order.is_completed = true;
         self.orders.insert(&order_id, &order);
@@ -62,7 +66,7 @@ impl EcomerceContract {
         }
     }
 
-    /// get order by order_id
+    // /// get order by order_id
     pub fn get_order(&self, order_id: OrderId) -> Order {
         self.orders.get(&order_id).expect("NOT_FOUND_ORDER_ID")
     }
@@ -113,7 +117,7 @@ mod tests {
         builder
     }
 
-    // #[test]
+    #[test]
     fn test_pay_order() {
         
     
